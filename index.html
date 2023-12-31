@@ -18,19 +18,21 @@
 
     <div class="container flex flex-col justify-center items-center p-[4rem] w-[fit-content] ">
         <!-- PassWord Generator -->
-        <div class="mainhead text-4xl text-yellow-900 " >
+        <div class="mainhead text-4xl text-yellow-900 ">
             Password Generator
         </div>
 
 
         <!--Get Password -->
-        <div class="getPassword flex justify-between items-center mt-6 gap-[1.2rem] border-double border-4 rounded-xl h-10  bg-purple-400 shadow-xl">
+        <div
+            class="getPassword flex justify-between items-center mt-6 gap-[1.2rem] border-double border-4 rounded-xl h-10  bg-purple-400 shadow-xl">
             <div class="passText">
-                <input readonly type="text" id="password" dataPasswordDisplay class="bg-transparent custom-border-none text-xl bold font-bold text-cyan-800 text-center outline-none">
+                <input readonly type="text" id="password" dataPasswordDisplay
+                    class="bg-transparent custom-border-none text-xl bold font-bold text-cyan-800 text-center outline-none">
             </div>
 
             <div class="copyBtnImg">
-                <span id="dataCopyMsg" ></span>
+                <span id="dataCopyMsg"></span>
                 <img src="copy.png" alt="" id="copyBtn" class="h-6 w-6 m-[5px]">
             </div>
         </div>
@@ -44,7 +46,8 @@
                     <div class="sizePass text-xl" id="mySlider" datalengthNumber>10</div>
                 </div>
                 <div class="passSlider">
-                    <input type="range" min="1" max="20" class="slider w-[100%] mt-4" id="mySlider" step="1" datalengthSlider class="">
+                    <input type="range" min="1" max="20" class="slider w-[100%] mt-4" id="mySlider" step="1"
+                        datalengthSlider class="">
                 </div>
             </div>
 
@@ -74,25 +77,26 @@
                     <label for="symbolCheck">Include Symbol Letters</label>
                 </div>
             </div>
-       
 
 
-        <div class="passwordstrength flex gap-[10rem] mt-6 text-xl text-yellow-200">
-            <div class="strength">Strength
+
+            <div class="passwordstrength flex gap-[10rem] mt-6 text-xl text-yellow-200">
+                <div class="strength">Strength
+                </div>
+
+                <div class="strengthIndicator bg-slate-400 rounded-full w-6 h-6 shadow-2xl">
+
+                </div>
             </div>
-            
-            <div class="strengthIndicator bg-slate-400 rounded-full w-6 h-6 shadow-2xl">
 
+            <div class="generatePassword flex justify-center">
+                <button id="genPass" class="text-xl text-yellow-100 mt-8 border-4 p-2 rounded-[25px]">Generate
+                    Password</button>
             </div>
-        </div>
 
-        <div class="generatePassword flex justify-center">
-            <button id="genPass" class="text-xl text-yellow-100 mt-8 border-4 p-2 rounded-[25px]" >Generate Password</button>
         </div>
-
     </div>
-    </div>
-    <script async src="./index.js"></script>
+    <script defer src="./index.js"></script>
 </body>
 
 </html>
