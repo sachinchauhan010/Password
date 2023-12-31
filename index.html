@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&family=Heebo&family=Kanit&family=Roboto+Condensed:ital@1&family=Roboto+Slab&family=Signika:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Password Generator</title>
+</head>
+
+<body class="bg-cyan-400 flex justify-center ">
+
+    <div class="container flex flex-col justify-center items-center p-[4rem] w-[fit-content] ">
+        <!-- PassWord Generator -->
+        <div class="mainhead text-4xl text-yellow-900 " >
+            Password Generator
+        </div>
+
+
+        <!--Get Password -->
+        <div class="getPassword flex justify-between items-center mt-6 gap-[1.2rem] border-double border-4 rounded-xl h-10  bg-purple-400 shadow-xl">
+            <div class="passText">
+                <input readonly type="text" id="password" dataPasswordDisplay class="bg-transparent custom-border-none text-xl bold font-bold text-cyan-800 text-center outline-none">
+            </div>
+
+            <div class="copyBtnImg">
+                <span id="dataCopyMsg" ></span>
+                <img src="copy.png" alt="" id="copyBtn" class="h-6 w-6 m-[5px]">
+            </div>
+        </div>
+
+        <!-- Password Specification  -->
+        <div class="PasswordPropery flex flex-col border-2 border-solid border-black rounded-2xl p-6 mt-5">
+
+            <div class="setPassword">
+                <div class="passLength flex justify-between gap-[8rem] mt-[4vh]">
+                    <div class="lengthPass text-xl">Password Length</div>
+                    <div class="sizePass text-xl" id="mySlider" datalengthNumber>10</div>
+                </div>
+                <div class="passSlider">
+                    <input type="range" min="1" max="20" class="slider w-[100%] mt-4" id="mySlider" step="1" datalengthSlider class="">
+                </div>
+            </div>
+
+
+            <div class="specification text-xl text-yellow-200">
+                <!-- Upper Case -->
+                <div class="Upper ">
+                    <input type="checkbox" id="upperCheck">
+                    <label for="upperCheck">Include Upper Letters</label>
+                </div>
+
+                <!-- Lower Case -->
+                <div class="Lower">
+                    <input type="checkbox" id="lowerCheck">
+                    <label for="lowerCheck">Include Lower Letters</label>
+                </div>
+
+                <!-- Number -->
+                <div class="Number">
+                    <input type="checkbox" id="numberCheck">
+                    <label for="numberCheck">Include Number</label>
+                </div>
+
+                <!-- Symbol -->
+                <div class="Symbol">
+                    <input type="checkbox" id="symbolCheck">
+                    <label for="symbolCheck">Include Symbol Letters</label>
+                </div>
+            </div>
+       
+
+
+        <div class="passwordstrength flex gap-[10rem] mt-6 text-xl text-yellow-200">
+            <div class="strength">Strength
+            </div>
+            
+            <div class="strengthIndicator bg-slate-400 rounded-full w-6 h-6 shadow-2xl">
+
+            </div>
+        </div>
+
+        <div class="generatePassword flex justify-center">
+            <button id="genPass" class="text-xl text-yellow-100 mt-8 border-4 p-2 rounded-[25px]" >Generate Password</button>
+        </div>
+
+    </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
